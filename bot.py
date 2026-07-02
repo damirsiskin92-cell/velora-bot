@@ -1,6 +1,6 @@
-from aiogram import Bot, Dispatcher, types
 import asyncio
 import random
+from aiogram import Bot, Dispatcher, types
 
 TOKEN = "7954707563:AAGkB_2Drlpst8vdbpPQUpM5Mr3huMzC5lE"
 
@@ -55,4 +55,5 @@ async def handler(message: types.Message):
 async def main():
     await dp.start_polling(bot)
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
