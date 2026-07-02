@@ -1,6 +1,7 @@
 import asyncio
 import random
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
+from aiogram.types import Message
 
 TOKEN = "7954707563:AAGkB_2Drlpst8vdbpPQUpM5Mr3huMzC5lE"
 
@@ -42,7 +43,7 @@ cards = [
 ]
 
 @dp.message()
-async def handler(message: types.Message):
+async def handler(message: Message):
     draw = random.sample(cards, 3)
 
     await message.answer(
